@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace KapitalBank
+﻿namespace KapitalBank
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private decimal balans;
+        public Form2(decimal gelenBalans)
         {
             InitializeComponent();
+            balans = gelenBalans;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -26,7 +18,7 @@ namespace KapitalBank
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Form3 form3 = new Form3(balans);
             form3.Show();
             this.Visible = false;
 

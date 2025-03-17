@@ -45,6 +45,7 @@
             button2 = new Button();
             ugurlulbl = new Label();
             balanslbl = new Label();
+            balanslbl2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -226,10 +227,23 @@
             balanslbl.ForeColor = SystemColors.ControlLightLight;
             balanslbl.Location = new Point(498, 159);
             balanslbl.Name = "balanslbl";
-            balanslbl.Size = new Size(207, 45);
+            balanslbl.Size = new Size(135, 45);
             balanslbl.TabIndex = 29;
-            balanslbl.Text = "Balans: 2000";
+            balanslbl.Text = "Balans: ";
             balanslbl.Visible = false;
+            // 
+            // balanslbl2
+            // 
+            balanslbl2.AutoSize = true;
+            balanslbl2.BackColor = Color.Transparent;
+            balanslbl2.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            balanslbl2.ForeColor = SystemColors.ControlLightLight;
+            balanslbl2.Location = new Point(639, 159);
+            balanslbl2.Name = "balanslbl2";
+            balanslbl2.Size = new Size(83, 45);
+            balanslbl2.TabIndex = 30;
+            balanslbl2.Text = "0.00";
+            balanslbl2.Visible = false;
             // 
             // Form3
             // 
@@ -237,6 +251,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Crimson;
             ClientSize = new Size(1198, 586);
+            Controls.Add(balanslbl2);
             Controls.Add(balanslbl);
             Controls.Add(ugurlulbl);
             Controls.Add(button2);
@@ -278,5 +293,6 @@
         private Button button2;
         private Label ugurlulbl;
         private Label balanslbl;
+        private Label balanslbl2;
     }
 }

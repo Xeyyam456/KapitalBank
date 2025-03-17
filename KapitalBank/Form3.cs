@@ -2,11 +2,13 @@
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        private decimal balans;
+        public Form3(decimal gelenBalans)
         {
             InitializeComponent();
+            balans = gelenBalans;
         }
-        decimal balans = 2000M;
+        //decimal balans = 2000M;
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
@@ -17,7 +19,11 @@
         private void button2_Click(object sender, EventArgs e)
         {
 
+
+
             balanslbl.Visible = true;
+            balanslbl2.Visible = true;
+            balanslbl2.Text = balans.ToString();
 
         }
 
@@ -42,7 +48,8 @@
                 ugurlulbl.Visible = true;
                 textBox1.Text = "";
                 balanslbl.Visible = false;
-                balanslbl.Text = $"Balans: {balans -= inputAzn}";
+                balanslbl2.Visible = false;
+                balanslbl2.Text = $"{balans -= inputAzn}";
                 ugurlulbl.Text = "Emeliyyat ugurla heyata kecirildi";
 
             }
@@ -56,6 +63,7 @@
                 ugurlulbl.Text = "Balansda yeterli vesait yoxdur";
                 textBox1.Text = "";
                 balanslbl.Visible = false;
+                balanslbl2.Visible = false;
             }
 
 
