@@ -8,7 +8,7 @@
             InitializeComponent();
             balans = gelenBalans;
         }
-        //decimal balans = 2000M;
+       
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
@@ -60,6 +60,7 @@
             }
             else
             {
+                ugurlulbl.Visible = true;
                 ugurlulbl.Text = "Balansda yeterli vesait yoxdur";
                 textBox1.Text = "";
                 balanslbl.Visible = false;
