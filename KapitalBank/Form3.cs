@@ -39,35 +39,41 @@
 
         private void button5_Click(object sender, EventArgs e)
         {
-            decimal inputAzn = Convert.ToDecimal(textBox1.Text);
+            try
+            {
+                decimal inputAzn = Convert.ToDecimal(textBox1.Text);
 
-
-
-            if (inputAzn <= balans)
+                if (inputAzn <= balans)
+                {
+                    ugurlulbl.Visible = true;
+                    textBox1.Text = "";
+                    balanslbl.Visible = false;
+                    balanslbl2.Visible = false;
+                    balans -= inputAzn;
+                    balanslbl2.Text = $"{balans}";
+                    ugurlulbl.Text = "Emeliyyat ugurla heyata kecirildi";
+                }
+                else if (balans == 0)
+                {
+                    ugurlulbl.Visible = true;
+                    ugurlulbl.Text = "Balansiniz 0 - dir";
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    ugurlulbl.Visible = true;
+                    ugurlulbl.Text = "Balansda yeterli vesait yoxdur";
+                    textBox1.Text = "";
+                    balanslbl.Visible = false;
+                    balanslbl2.Visible = false;
+                }
+            }
+            catch (FormatException)
             {
                 ugurlulbl.Visible = true;
-                textBox1.Text = "";
-                balanslbl.Visible = false;
-                balanslbl2.Visible = false;
-                balanslbl2.Text = $"{balans -= inputAzn}";
-                ugurlulbl.Text = "Emeliyyat ugurla heyata kecirildi";
-
-            }
-            else if (balans == 0)
-            {
-                ugurlulbl.Text = "                 Balansiniz 0 - dir";
+                ugurlulbl.Text = "Duzgun mebleg daxil edin";
                 textBox1.Text = "";
             }
-            else
-            {
-                ugurlulbl.Visible = true;
-                ugurlulbl.Text = "Balansda yeterli vesait yoxdur";
-                textBox1.Text = "";
-                balanslbl.Visible = false;
-                balanslbl2.Visible = false;
-            }
-
-
         }
     }
 }
