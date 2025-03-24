@@ -52,62 +52,119 @@ namespace KapitalBank
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Button buttonOne = (Button)sender;
-            textBox1.Text += buttonOne.Text;
+            if (textBox1.Text.Length < 4)
+            {
+
+                Button buttonOne = (Button)sender;
+                textBox1.Text += buttonOne.Text;
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Button buttonTwo = (Button)sender;
-            textBox1.Text += buttonTwo.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonTwo = (Button)sender;
+                textBox1.Text += buttonTwo.Text;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Button buttonThree = (Button)sender;
-            textBox1.Text += buttonThree.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonThree = (Button)sender;
+                textBox1.Text += buttonThree.Text;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Button buttonFour = (Button)sender;
-            textBox1.Text += buttonFour.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonFour = (Button)sender;
+                textBox1.Text += buttonFour.Text;
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Button buttonFive = (Button)sender;
-            textBox1.Text += buttonFive.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonFive = (Button)sender;
+                textBox1.Text += buttonFive.Text;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Button buttonSix = (Button)sender;
-            textBox1.Text += buttonSix.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonSix = (Button)sender;
+                textBox1.Text += buttonSix.Text;
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Button buttonSeven = (Button)sender;
-            textBox1.Text += buttonSeven.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonSeven = (Button)sender;
+                textBox1.Text += buttonSeven.Text;
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Button buttonEight = (Button)sender;
-            textBox1.Text += buttonEight.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonEight = (Button)sender;
+                textBox1.Text += buttonEight.Text;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Button buttonNine = (Button)sender;
-            textBox1.Text += buttonNine.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonNine = (Button)sender;
+                textBox1.Text += buttonNine.Text;
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Button buttonZero = (Button)sender;
-            textBox1.Text += buttonZero.Text;
+            if (textBox1.Text.Length < 4)
+            {
+                Button buttonZero = (Button)sender;
+                textBox1.Text += buttonZero.Text;
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            textBox1.MaxLength = 4;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

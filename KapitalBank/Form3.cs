@@ -56,7 +56,7 @@
                 else if (balans == 0)
                 {
                     ugurlulbl.Visible = true;
-                    ugurlulbl.Text = "Balansiniz 0 - dir";
+                    ugurlulbl.Text = "           Balansiniz 0 AZN - dir";
                     textBox1.Text = "";
                 }
                 else

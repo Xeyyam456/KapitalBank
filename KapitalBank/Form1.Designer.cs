@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -44,6 +45,8 @@
             button9 = new Button();
             button10 = new Button();
             button12 = new Button();
+            button11 = new Button();
+            button13 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -88,10 +91,10 @@
             textBox1.MaxLength = 4;
             textBox1.Name = "textBox1";
             textBox1.PasswordChar = '*';
-            textBox1.PlaceholderText = "PIN ";
             textBox1.Size = new Size(373, 32);
             textBox1.TabIndex = 3;
             textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -128,7 +131,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(577, 230);
+            button3.Location = new Point(580, 230);
             button3.Name = "button3";
             button3.Size = new Size(63, 51);
             button3.TabIndex = 7;
@@ -158,7 +161,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(577, 297);
+            button6.Location = new Point(580, 297);
             button6.Name = "button6";
             button6.Size = new Size(63, 51);
             button6.TabIndex = 10;
@@ -188,7 +191,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(577, 364);
+            button9.Location = new Point(580, 364);
             button9.Name = "button9";
             button9.Size = new Size(63, 51);
             button9.TabIndex = 13;
@@ -210,11 +213,33 @@
             // 
             button12.Location = new Point(494, 429);
             button12.Name = "button12";
-            button12.Size = new Size(233, 51);
+            button12.Size = new Size(63, 51);
             button12.TabIndex = 16;
             button12.Text = "0";
             button12.UseVisualStyleBackColor = true;
             button12.Click += button12_Click;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(580, 429);
+            button11.Name = "button11";
+            button11.Size = new Size(63, 51);
+            button11.TabIndex = 17;
+            button11.Text = "CLR";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // button13
+            // 
+            button13.BackgroundImage = (Image)resources.GetObject("button13.BackgroundImage");
+            button13.BackgroundImageLayout = ImageLayout.Stretch;
+            button13.ForeColor = SystemColors.ControlText;
+            button13.Location = new Point(664, 429);
+            button13.Name = "button13";
+            button13.Size = new Size(63, 51);
+            button13.TabIndex = 18;
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
             // 
             // Form1
             // 
@@ -222,6 +247,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Crimson;
             ClientSize = new Size(1198, 586);
+            Controls.Add(button13);
+            Controls.Add(button11);
             Controls.Add(button12);
             Controls.Add(button8);
             Controls.Add(button9);
@@ -243,6 +270,7 @@
             MaximumSize = new Size(1214, 625);
             MinimumSize = new Size(1214, 625);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -266,5 +294,7 @@
         private Button button9;
         private Button button10;
         private Button button12;
+        private Button button11;
+        private Button button13;
     }
 }

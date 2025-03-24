@@ -267,6 +267,7 @@
             MaximumSize = new Size(1214, 625);
             MinimumSize = new Size(1214, 625);
             Name = "Form3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form3";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
